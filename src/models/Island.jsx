@@ -17,7 +17,7 @@ import { useFrame, useThree } from "@react-three/fiber";
 import islandScene from "../assets/3d/island.glb";
 
 export function Island({
-  isRotating,
+  IsRotating,
   setIsRotating,
   setCurrentStage,
   currentFocusPoint,
@@ -81,7 +81,7 @@ export function Island({
   // Handle keydown events
   const handleKeyDown = (event) => {
     if (event.key === "ArrowLeft") {
-      if (!isRotating) setIsRotating(true);
+      if (!IsRotating) setIsRotating(true);
 
       islandRef.current.rotation.y += 0.005 * Math.PI;
       rotationSpeed.current = 0.007;
@@ -122,7 +122,7 @@ export function Island({
   // This function is called on each frame update
   useFrame(() => {
     // If not rotating, apply damping to slow down the rotation (smoothly)
-    if (!isRotating) {
+    if (!IsRotating) {
       // Apply damping factor
       rotationSpeed.current *= dampingFactor;
 
