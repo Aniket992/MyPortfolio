@@ -36,6 +36,7 @@ const Home = () => {
         <ambientLight/>
         <pointLight/>
         <spotLight/>
+        <spotLight/>
         <hemisphereLight/>
 
         <Island
